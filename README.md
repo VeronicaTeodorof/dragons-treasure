@@ -100,7 +100,12 @@ Once the basic functionality has been added, I decided to move on to the second 
 In the first phase there will be minimal features: a heading, a feedback section and a playing section. The playing section will include: the input fields, the submit button and the play button.
 
 In the second phase imagery will be added and the styling will be accordingly changed.
-The mobile version will include: a header with UI buttons, a main with the background image of a dragon and two sections: a feedback section, and a play section; the play section will have a padlock background image and a form to submit player guess. The mobile view will also include a virtual keyboard in the footer. Since the default virtual keyboard takes about 40-50% of the viewheight and the numeric one only saves 10-20%, I decided to add a custom virtual keyboard and block the default one, to be able to control the amount of space it takes.
+
+First I decided that the mobile version would include: a header with UI buttons, a main with the background image of a dragon and two sections: a feedback section, and a play section; the play section would have a padlock background image and form input fields to submit player guess. The mobile view would also include a virtual keyboard in the footer. Since the default virtual keyboard takes about 40-50% of the viewheight and the numeric one only saves 10-20%, I decided to add a custom virtual keyboard and block the default one, to be able to control the amount of space it takes.
+
+After creating the html structure and css style for the custom virtual keyboard, the feedback received from my tutor was that the keys were too small, and to make it work I'd have to enlarge the keys and make a third row in the keyboard. This meant that I could only save very little space and my custom keyboard would not meet its purpose. So I had to rethink the layout of the mobile view.
+
+ I decided to move the UI buttons at the bottom of the page and take out the padlock image. Since the default numeric keyboard takes maximum 40% of the viewport height, I would have 60% left for the play and feedback areas.
 
 ### <h3 id="typography">Typography</h3>
 I will first experiment the playful "Mistery Quest" Google Font for heading paired with the contrasting sans-serif "Roboto" for everything else.
