@@ -141,6 +141,8 @@ Google Fonts - for the fonts used in the game;
 
 https://coolors.co/ for creating the colour pallette;
 
+https://www.freeconvert.com/ for converting images to webp format
+
 ## <h2 id="deployment-and-development">6. Deployment and Local Development
 ### <h3 id="deployment">Deployment</h3>
 

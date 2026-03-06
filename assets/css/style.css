@@ -27,7 +27,7 @@
 } 
 
 header {
-    background-color: green;
+    /* background-color: green; */
     min-height: 10vh;
 }
 
@@ -87,7 +87,7 @@ h2 {
 
 /* Feedback section */
 .feedback {
-    background-color:black;
+    /* background-color:black; */
     margin:auto;
     border: 2px solid var(--prussian-blue);
     max-width: 264px;
@@ -119,11 +119,6 @@ h2 {
 #play-area {
     background-color: transparent;
     /* height: 25vh; */
-}
-
-.padlock {
-    height: 250px;
-    opacity: 0.8;
 }
 
 .hidden {
@@ -196,20 +191,6 @@ input[type="submit"] {
 }
 
 /* Footer */
-.keyboard {
-    background-color: rgb(181, 166, 166);
-    min-height:15vh;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-}
-.key {
-    padding: 0 0.5rem;
-    border: 1px solid black;
-    border-radius: 2px;
-}
-.key:active {
-    background-color: whitesmoke;
-}
 
 /* Media queries */
 
