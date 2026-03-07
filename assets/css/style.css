@@ -26,11 +26,6 @@
     overflow: hidden;
 } 
 
-header {
-    /* background-color: green; */
-    min-height: 10vh;
-}
-
 main {
     background-color: transparent;
     min-height: 75vh;
@@ -69,10 +64,26 @@ h2 {
 /* Game Page */
 
 .game-body {
-    background-image: url("../images/dragon-treasure-larger.webp");
+    background-image: url("../images/dragon-treasure-dark.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.light-overlay {
+    background-color: rgba(77, 100, 94, 0.5);
+    min-height: 75vh;
+    min-width: 80vw;
+    margin: 20px;
+    border-radius: 10%;
+    position:relative
+}
+
+.dragon-symbol {
+    max-height: 70vh;
+    position: absolute;
+    left: 20%;
+    opacity: 0.7;
 }
 /* UI Buttons */
 .buttons-container {
@@ -96,7 +107,7 @@ h2 {
 .feedback {
     /* background-color:black; */
     margin:auto;
-    border: 2px solid var(--prussian-blue);
+    /* border: 2px solid var(--prussian-blue); */
     max-width: 264px;
     min-height: 34vh;
 
@@ -138,7 +149,7 @@ form {
 }
 
 .guess-form {
-    top: 68%;
+    top: 55%;
 }
 
 .input {
@@ -198,6 +209,12 @@ input[type="submit"] {
 }
 
 /* Footer */
+.footer {
+    min-height: 15vh;
+    background-color: rgba(110, 140, 167, 0.2);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
 
 /* Media queries */
 

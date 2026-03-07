@@ -143,6 +143,8 @@ https://coolors.co/ for creating the colour pallette;
 
 https://www.freeconvert.com/ for converting images to webp format
 
+https://www.remove.bg/ for removing image background
+
 ## <h2 id="deployment-and-development">6. Deployment and Local Development
 ### <h3 id="deployment">Deployment</h3>
 
