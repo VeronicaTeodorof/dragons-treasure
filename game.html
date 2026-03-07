@@ -25,10 +25,44 @@
     <!-- Main -->
     <main>
         <div class="light-overlay">
-            <img src="assets/images/dragon-symbol-dark-removebg.webp" alt="mettalic serpent dragon" class="dragon-symbol">
-
-        <!-- end tag for div .light-overlay -->
+            <img src="assets/images/dragon-symbol-dark-removebg.webp" alt="metallic serpent dragon" 
+            class="dragon-symbol position-absolute start-50 translate-middle-x">
         </div>
+        <!-- Feedback section -->
+        <section id="feedback" class="feedback">
+            <div id="first-column" class="custom-container left-container">
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+            </div>
+            <div id="second-column" class="custom-container">
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span float-right"></span></div>
+                <div class="guess"><span class="guess-span visible-text"></span><span class="feedback-span last float-right"></span></div>
+            </div>
+        </section>
+
+         <!-- Play section -->
+        <section id="play-area">
+            <div class="positin-relative text-center">
+                <div id="error-modal" class="hidden"></div>
+                <form id="guess-form" class="guess-form position-absolute start-50 translate-middle-x">
+                    <!-- input mode="numeric" makes virtual keyboard dispaly numeric values only;
+                     This was needed in order to save space (10 to 20% of screen height) on mobile devices.
+                     Code was taken from stackoverflow and suggested by Kevin Loughrey -->
+                    <input id="input1" name="input1" type="number" inputmode="numeric" class="input" aria-labelledby="input1" required>
+                    <input id="input2" name="input2" type="number" inputmode="numeric" class="input" aria-labelledby="input2" required>
+                    <input id="input3" name="input3" type="number" inputmode="numeric" class="input" aria-labelledby="input3" required>
+                    <input id="input4" name="input4" type="number" inputmode="numeric" class="input" aria-labelledby="input4" required>
+                    <br>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="mt-auto footer">

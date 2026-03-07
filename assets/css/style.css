@@ -23,7 +23,7 @@
  body {
     background: url('../images/background-image.webp');
     background-position-x: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 } 
 
 main {
@@ -76,7 +76,7 @@ h2 {
     min-width: 80vw;
     margin: 20px;
     border-radius: 10%;
-    position:relative
+    position:relative;
 }
 
 .dragon-symbol {
@@ -108,14 +108,29 @@ h2 {
     /* background-color:black; */
     margin:auto;
     /* border: 2px solid var(--prussian-blue); */
-    max-width: 264px;
-    min-height: 34vh;
+    /* max-width: 264px; */
+    min-height: 20vh;
+    position: absolute;
+    top: 1%;
+    
 
 }
 
 .guess {
-    border: 3px solid var(--prussian-blue);
-    background-color: #648b5c;
+    max-height: 1.7rem;
+}
+
+/* Gradient created in coolors.co */
+.golden-gradient {
+    background: hsla(50, 100%, 39%, 1);
+
+   background: linear-gradient(90deg, hsla(50, 100%, 39%, 1) 19%, hsla(67, 87%, 82%, 1) 59%);
+
+   background: -moz-linear-gradient(90deg, hsla(50, 100%, 39%, 1) 19%, hsla(67, 87%, 82%, 1) 59%);
+
+   background: -webkit-linear-gradient(90deg, hsla(50, 100%, 39%, 1) 19%, hsla(67, 87%, 82%, 1) 59%);
+
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C8A700", endColorstr="#F0F9A7", GradientType=1 );
 }
 
 .visible-text {
@@ -149,7 +164,7 @@ form {
 }
 
 .guess-form {
-    top: 55%;
+    top: 50%;
 }
 
 .input {
