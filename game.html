@@ -54,10 +54,10 @@
                     <!-- input mode="numeric" makes virtual keyboard dispaly numeric values only;
                      This was needed in order to save space (10 to 20% of screen height) on mobile devices.
                      Code was taken from stackoverflow and suggested by Kevin Loughrey -->
-                    <input id="input1" name="input1" type="number" inputmode="numeric" class="input" aria-labelledby="input1" required>
-                    <input id="input2" name="input2" type="number" inputmode="numeric" class="input" aria-labelledby="input2" required>
-                    <input id="input3" name="input3" type="number" inputmode="numeric" class="input" aria-labelledby="input3" required>
-                    <input id="input4" name="input4" type="number" inputmode="numeric" class="input" aria-labelledby="input4" required>
+                    <input id="input1" name="input1" type="number" inputmode="numeric" class="input" aria-labelledby="input1"  min="0" max="9" required>
+                    <input id="input2" name="input2" type="number" inputmode="numeric" class="input" aria-labelledby="input2"  min="0" max="9" required>
+                    <input id="input3" name="input3" type="number" inputmode="numeric" class="input" aria-labelledby="input3"  min="0" max="9" required>
+                    <input id="input4" name="input4" type="number" inputmode="numeric" class="input" aria-labelledby="input4"  min="0" max="9" required>
                     <br>
                     <input id="submit" type="submit" value="Submit">
                 </form>
