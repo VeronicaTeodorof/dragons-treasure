@@ -145,6 +145,8 @@ https://www.freeconvert.com/ for converting images to webp format
 
 https://www.remove.bg/ for removing image background
 
+https://imagecolorpicker.com/ for picking colors from images
+
 ## <h2 id="deployment-and-development">6. Deployment and Local Development
 ### <h3 id="deployment">Deployment</h3>
 

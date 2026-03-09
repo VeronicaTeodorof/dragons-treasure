@@ -20,28 +20,31 @@
 }
 
 /* Global styles */
- body {
-    background: url('../images/background-image.webp');
-    background-position-x: center;
+ .home-body {
+    min-height: 95vh;
+    /* colours picked from game.html background image and gradient made in coolors.com */
+    background: hsla(236, 71%, 8%, 1);
+
+    background: linear-gradient(315deg, hsla(236, 71%, 8%, 1) 48%, hsla(179, 55%, 75%, 1) 92%);
+
+    background: -moz-linear-gradient(315deg, hsla(236, 71%, 8%, 1) 48%, hsla(179, 55%, 75%, 1) 92%);
+
+    background: -webkit-linear-gradient(315deg, hsla(236, 71%, 8%, 1) 48%, hsla(179, 55%, 75%, 1) 92%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#060823", endColorstr="#9EE3E2", GradientType=1 );
     /* overflow: hidden; */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
 } 
 
-h1 {
-    font-family: var(--heading-font);
-    color: var(--treasure-yellow);
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    padding: 0.5rem;
-    border-radius: 10%;
-    box-shadow: 3px 5px var(--prussian-blue);
-    max-width: 250px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    
-}
+.treasure-image {
+    position:absolute;
+    max-height: 300px;
+    top: 45%;
+    left: 5%;
 
+}
 
 .custom-box {
     background-color: var(--chest-brown);
@@ -51,7 +54,7 @@ h1 {
 /* Game Page */
 
 .game-body {
-    background-image: url("../images/dragon-treasure-dark.jpg");
+    background-image: url("../images/dragon-treasure-larger.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
