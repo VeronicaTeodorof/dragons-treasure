@@ -76,8 +76,6 @@ body {
 }
 
 .custom-box {
-    /* 
-     */
     border: 2px solid var(--prussian-blue);
 }
 
@@ -117,7 +115,6 @@ body {
         height: 50px;
         font-size: larger;
         border-radius: 5px;
-        background-color:aliceblue;
         align-self: center;
 }
 
