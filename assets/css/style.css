@@ -155,6 +155,8 @@ h1 {
 
 .guess {
     max-height:1.8rem;
+    display: flex;
+    align-items: center;
 }
 
 /* Gradient created in coolors.co */

@@ -33,9 +33,9 @@ This is a trial and error game which seeks to develop critical thinking and logi
 - Local Development
 
 ### <a href="#testing">7. Testing</a>
-- <a href="full-testing">Full Testing</a>
-- Solved Bugs 
-- Known Bugs
+- <a href="#full-testing">Full Testing</a>
+- <a href="#solved-bugs">Solved Bugs</a>
+- <a href="#known-bugs">Known Bugs</a>
 - <a href="#w3c">W3C Validation</a>
 - JavaScript Validation
 - <a href="lighthouse">Lighthouse</a>
@@ -166,6 +166,17 @@ Instructions on how to achieve this can be found below:
  ### <h3 id="full-testing">Full Testing</h3>
  After implementing second phase design, my tutor's feedback was that I should keep the submit button everywhere (I intended to remove it completely from the mobile view because of the lack of space); he said that mobile users do not use the enter key on a virtual keyboard much and therefore I needed a dedicated button. He also suggested increasing font size of the feedback and guess on the desktop view and changing some colous in the feedback for better visibility.
 
+
+### <h3 id="solved-bugs">Solved Bugs</h3>
+
+**Missallingnment Bug**
+
+
+After including Bootstrap in game.html page, the text of the guess span was vertically aligned at the base of its container, while the content of the feedback span was centered. This caused a noticeable missalignment between the two. 
+I tried to rectify it with bootstrap classes: "allign-middle", "allign-bottom", "allign-text-bottom", "allign-text-top", but none of them had any effect.
+I eventually sorted that with css "display: flex;" and "allign-items: center;" with help from https://www.w3schools.com/css/css_align_vertical.asp.
+
+
 ### <h3 id="known-bugs">Known Bugs</h3>
 
 
@@ -182,6 +193,7 @@ The problem was that the cursor also moved to the next input in the following si
 **Wrong Event Modal Bug**
 
 After removing the alerts for winning and losing events, and replacing them with bootstrap modals, Vlad Boitos discovered the event modal bug. The loseModal would always appear on the screen after the player submitted the 10th try, regardless of whether this guess would be worng or correct. When the guess was correct, the loseModal would appear on top of the winModal.
+
 
 ### <h3 id="w3c">W3C Validation</h3>
 First phase:
