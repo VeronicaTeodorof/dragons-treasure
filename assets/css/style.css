@@ -42,6 +42,7 @@ body {
     overflow: hidden;
 }
 
+/* Make a class for most of the styles below and apply to modal-title as well */
 h1 {
     font-family: var(--heading-font);
     font-size: 5rem;
@@ -337,6 +338,7 @@ input[type="submit"] {
     margin-top: 3.5rem;
     margin-left: 1rem;
     font-family: var(--primary-font);
+    color:hsla(236, 71%, 8%, 1);
 }
 
 .modal-button {
@@ -466,7 +468,10 @@ input[type="submit"] {
     }
 
     /* Modals */
-    .button-modal {
-        background-size: contain;
+
+    .modal-title {
+        color: rgb(146, 179, 228);
+        -webkit-text-stroke: 1.5px var(--prussian-blue);
     }
+   
 }
