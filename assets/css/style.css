@@ -207,6 +207,7 @@ h1 {
    
 }
 
+/* Remember to make a class for most of the styles below and apply to modal buttons */
 input[type="submit"] {
     /* display: inline-block; */
     background-color: rgb(13, 17, 70);
@@ -320,10 +321,38 @@ input[type="submit"] {
 .button-modal {
     background-image: url("../images/paper.webp");
     background-color: transparent;
-    background-size: contain;
+    background-size: cover;
     
 }
 
+.modal-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-left: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.modal-body {
+    font-size: 1.2rem;
+    margin-top: 3.5rem;
+    margin-left: 1rem;
+    font-family: var(--primary-font);
+}
+
+.modal-button {
+    background-color: rgb(13, 17, 70);
+    color: goldenrod;
+    font-family: var(--primary-font);
+    /* margin-top: 5px; */
+    font-size: large;
+    min-height: 35px;
+    min-width: 45px;
+    letter-spacing: 0.1rem;
+    font-weight:500;
+    border: 1px solid gold;
+    margin-left: 0.7rem;
+    margin-bottom:1.5rem;
+}
 
 
 
@@ -434,5 +463,10 @@ input[type="submit"] {
         align-self: center;
         margin: 1.5rem 0.8rem;
 
+    }
+
+    /* Modals */
+    .button-modal {
+        background-size: contain;
     }
 }
