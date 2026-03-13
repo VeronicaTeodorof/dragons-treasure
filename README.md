@@ -216,6 +216,14 @@ Style.css page has also been validated with no errors found: [css initial valida
 ### <h3 id="lighthouse">Lighthouse</h3>
 Initial lighthouse tests show some areas that can be improved in terms of accessibility and SEO. Here are the screenshots for initial tests: [initial lighthouse for mobile](readme-assets/first-phase/lighthouse-for-mobile-initial.png), [initial lighthouse for desktop](readme-assets/first-phase/lighthouse-for-desktop-initial.png), [accessibility](readme-assets/first-phase/accessibility-initial.png) and [SEO](readme-assets/first-phase/seo-initial.png).
 
+During second phase development lifecycle lighthouse tests revealed some accessibility issues related to the size of UI Buttons:
+[second-phase initial test](readme-assets/second-phase/lighthouse-2nd-initial1.png),
+[initial accessibility issue](readme-assets/second-phase/lighthouse-2nd-initial2.png).
+
+After changing button size and margin, the accessibility issue was solved:
+[mobile lighthouse after](readme-assets/second-phase/mobile-lighthouse-after.png), 
+[desktop lighthouse after](readme-assets/second-phase/desktop-lighthouse-after.png).
+
 ## <h2 id="credits2">8. Credits</h2>
 ### <h3 id="documentation">Documentation</h3>
 

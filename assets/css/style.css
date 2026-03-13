@@ -272,12 +272,13 @@ input[type="submit"] {
 }
 
 .game-button {
-        width: 50px;
-        height: 50px;
-        font-size: larger;
+        min-width: 8vw;
+        min-height: 4vh;
+        font-size: 1.5rem;
+        padding: 0.3rem;
         border-radius: 5px;
         align-self: center;
-        margin: 1rem 0.3rem;
+        margin: 1.5rem 0.8rem;
 }
 
 /* Tooltips */
@@ -423,5 +424,15 @@ input[type="submit"] {
          min-height: 50px;
     }
 
-}
+    /* UI Buttons */
+    .game-button {
+        min-width: 5vw;
+        min-height: 4vh;
+        font-size: 1.5rem;
+        padding: 0.3rem;
+        border-radius: 5px;
+        align-self: center;
+        margin: 1.5rem 0.8rem;
 
+    }
+}
