@@ -105,11 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             function giveFeedback() {
-                let blackDot = "⚫ ";
+                let redDot = "🔴 ";
                 let whiteDot = "⚪ ";
                 let redX = "❌ ";
                 let feedback = document.querySelector(".feedback-span");
-                feedback.innerText = `${blackDot.repeat(numCorrect)} ${whiteDot.repeat(numIncorrectlyPlaced)} ${redX.repeat(numIncorrect)}`;
+                feedback.innerText = `${whiteDot.repeat(numCorrect)} ${redDot.repeat(numIncorrectlyPlaced)} ${redX.repeat(numIncorrect)}`;
                 feedback.classList.remove("feedback-span");
                 if(feedback.classList.contains("last") && numCorrect !== 4) {
                     // alert(`Game over! The code was: ${computerCode}.`);
