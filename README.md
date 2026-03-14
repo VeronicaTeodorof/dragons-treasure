@@ -203,6 +203,11 @@ I accomplished that with the following code:
 
 The problem was that the cursor also moved to the next input in the following situation: the user changes their mind about one of the values entered, manually moves the cursor to one of the previous input fields, presses backspace to delete the value, the value is deleted. Now naturally they expect the cursor to stay in the selected input to be able to type the new value, but instead, the cursor moves to the next input automatically bacause backspace event is interpreted as an "input" event.
 
+I eventually found out how to differentiate betwwen different input event types with inputType Property from: https://www.w3schools.com/jsref/event_inputevent_inputtype.asp and corrected my function as follows: 
+
+
+<img src="readme-assets/second-phase/move-focus-function-debugged.png">
+
 
 ### <h3 id="w3c">W3C Validation</h3>
 First phase:

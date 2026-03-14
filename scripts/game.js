@@ -13,14 +13,19 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("input1").focus();
     }
 
-    // Moves cursor to the next input after user enters a value
+    // Moves focus to the next input field after one digit has been inserted
     function moveFocus() {
         let inputBoxes = document.querySelectorAll(".input");
-    
-        for(let i = 0; i < inputBoxes.length - 1; i++) {
-            inputBoxes[i].addEventListener("input", () => inputBoxes[i+1].focus());
+
+        for(let i=0; i<inputBoxes.length-1; i++) {
+            inputBoxes[i].addEventListener("input", (event) => {
+                if (event.inputType !== "deleteContentBackward") {
+                    inputBoxes[i+1].focus();
+                } 
+            });
         }
     }
+
     moveFocus();
 
     // Generates a 4 digit random code:
