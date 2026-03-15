@@ -1,12 +1,5 @@
-/* Think about best practices: - try not to use id s in css
-                               - for colours check contrast with Coolors */
-                               
-/* When debugging think about: specificity and inheritance */
-
-
-
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Skranji&family=MedievalSharp&family=Great+Vibes&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CSS variables */
 :root {
@@ -435,12 +428,18 @@ https://stackoverflow.com/questions/70000450/how-to-animate-image-from-fixed-siz
 }
 
     /* Feedback section */
+
+    .light-overlay {
+        margin:30px 20px;
+    }
+
     .feedback {
         border: none;
         margin: auto;
         max-width: none;
         display: flex;
         justify-content: center;
+        top: 10%;
     }
     
     .guess {

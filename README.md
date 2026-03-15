@@ -108,7 +108,10 @@ After creating the html structure and css style for the custom virtual keyboard,
  I decided to move the UI buttons at the bottom of the page and take out the padlock image. Since the default numeric keyboard takes maximum 40% of the viewport height, I would have 60% left for the play and feedback areas.
 
 ### <h3 id="typography">Typography</h3>
-I will first experiment the playful "Mistery Quest" Google Font for heading paired with the contrasting sans-serif "Roboto" for everything else.
+I first experimented with the playful "Mistery Quest" Google Font for heading paired with the contrasting sans-serif "Roboto" for everything else.
+
+In the second phase kept "Roboto" style as a primary font and tried a few fonts for headings like "Skranji" and "Medieval Sharp". In the end I decided to go for "Great Vibes", which I've discovered in Azamat Kashebayev's project, "Magic Forest": https://akashebaev-ux.github.io/Magic-forest/ .
+
 
 ### <h3 id="colours">Colour Scheme</h3>
 As the game in its final form would ideally include the images of a sleeping dragon and a locked treasure chest, for the MVP I chose a colour pallette inspired by these images: "dragon-green"= #0B870D, "chest-brown"= #46211C, "treasure-gold"= #FFD700, and "contrast-red"= #FF0000 ([see initial pallette here](readme-assets/first-phase/codebreaker-game-pallette.png)).
