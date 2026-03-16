@@ -114,11 +114,35 @@ In the second phase kept "Roboto" style as a primary font and tried a few fonts 
 
 
 ### <h3 id="colours">Colour Scheme</h3>
-As the game in its final form would ideally include the images of a sleeping dragon and a locked treasure chest, for the MVP I chose a colour pallette inspired by these images: "dragon-green"= #0B870D, "chest-brown"= #46211C, "treasure-gold"= #FFD700, and "contrast-red"= #FF0000 ([see initial pallette here](readme-assets/first-phase/codebreaker-game-pallette.png)).
+With the imagery of the final product in mind, for the MVP I chose a colour pallette inspired by dragons and riches: "dragon-green"= #0B870D, "chest-brown"= #46211C, "treasure-gold"= #FFD700, and "contrast-red"= #FF0000 ([see initial pallette here](readme-assets/first-phase/codebreaker-game-pallette.png)).
 
-As there wasn't sufficient contrast between colours to have one for the text and one for the background, after checking contrast in Coolors ([see here](readme-assets/first-phase/contrast-check-heading.png)), I updated the colour pallette to:
+As there wasn't sufficient contrast between text and background, after checking contrast in Coolors ([see here](readme-assets/first-phase/contrast-check-heading.png)), I updated the colour pallette to:
 
 <img src="readme-assets/first-phase/codebreaking-game-pallette2.png">
+
+
+
+In the second phase of the game, after trying a few different outlays, I decided to use the background image of the game page as the starting point of my design. I did not have a preset colour scheme. I picked two colours from the enchanted-realm image, var dark-blue and var heading-light-blue. I made a gradient out of the two in coolors.com: 
+
+<img src="readme-assets/second-phase/blue-gradient.png" style="height: 250px;">
+
+I used this in the mobile version of the home page, while for the tablet and desktop I used the darker tone only.
+The two colours were also combined in home page heading and bootstrap modal headings as text colour and text stroke.
+As resource for this I used MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke .
+
+To emphasize the theme of the game, I decided to make another gradient which I've used mainly for buttons, the golden-gradient: 
+
+<img src="readme-assets/second-phase/golden-gradient.png" style="height: 250px;">
+
+And again, for the same reason, I chose to combine the button-blue variable with gold and goldenrod tones to create the try button and modal buttons. This combination reminded me of the rich velvet combined with golden threads used in theatre curtains.
+
+<img src="readme-assets/second-phase/velvet-colur-combination.png">
+
+This is the general colour pallette used in the final design: 
+
+<img src="readme-assets/second-phase/dragons&apos;-treasure-pallette.png">
+
+All other secondary colours used are either a reminiscence of the initial colour scheme, or they were selected ad-hoc in vscode after many tries, for the way they looked and felt, and were possible, validated with lighthouse for accessibility.
 
 ### <h3 id="wireframes">Wireframes</h3>
 [First phase wireframes](readme-assets/first-phase/first-phase-wireframe.png)
