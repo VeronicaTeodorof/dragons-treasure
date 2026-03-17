@@ -37,7 +37,7 @@
     <!-- How to play Bootstrap Modal -->
     <div class="modal fade" id="howToModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content button-modal">
+            <div class="modal-content old-paper">
                 <!-- Bootstrap border-0 class to remove border between head and body and between body and footer taken form
                  https://stackoverflow.com/questions -->
                 <div class="modal-header border-0">
@@ -65,7 +65,7 @@
     <!-- Story Modal -->
      <div class="modal fade" id="storyModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content button-modal">
+            <div class="modal-content old-paper">
                 <div class="modal-header border-0">
                      <h1 class="modal-title text-center" id="storyModalLabel">The Story</h1>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -83,20 +83,21 @@
     </div>
 
     <!-- Win Bootstrap Modal -->
-    <div class="modal fade" id="winModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content button-modal">
-                <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="winModalLabel">You Won!</h1>
+    <div class="modal fade mo" id="winModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content win-modal">
+                <div class="modal-header border-0">
+                     <h1 class="modal-title win-title" id="winModalLabel">You Won!</h1>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Congratulations message.</p>
+                    <p class="win-message text-center">The treasure is yours!</p>
+                    <img src="assets/images/treasure-removebg.webp" class="win-treasure" alt="treasure chest">
                 </div>
-                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-secondary" onclick="location.href='index.html'" >Home</button>
-                    <button type="button" class="btn btn-secondary" onclick="location.href='game.html';">Play again</button>
+                 <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary golden-gradient" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary golden-gradient" onclick="location.href='index.html'" >Home</button>
+                    <button type="button" class="btn btn-secondary golden-gradient" onclick="location.href='game.html';">Play again</button>
                 </div>
             </div>
         </div>

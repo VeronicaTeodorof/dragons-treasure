@@ -49,8 +49,7 @@
 
 /* || POSITION */
 .removed {
-    position: absolute;
-    top: -50%;
+    display: none;
 }
 
 /* || FADE-OUT ANIMATION */
@@ -322,7 +321,7 @@ input[type="submit"] {
 
 /* Modals */
 
-.button-modal {
+.old-paper {
     background-image: url("../images/paper.webp");
     background-color: transparent;
     background-size: cover;
@@ -363,6 +362,33 @@ input[type="submit"] {
 .fire-background {
     background: url(../images/fire-background1.webp);
     background-size: cover;
+}
+
+.win-modal {
+    background-color: var(--heading-light-blue);
+
+}
+
+.win-treasure {
+    height: 200px;
+    position: absolute;
+    top: 50%;
+}
+
+.win-title {
+    font-size: 3.5rem;
+    color: var(--dark-blue);
+    margin-top: 2rem;
+} 
+
+.win-message {
+    margin-top: 6rem;
+    font-size: 1.5rem;
+}
+
+.btn-secondary {
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
 }
 
 /* Lose animation */
