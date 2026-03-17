@@ -89,23 +89,76 @@ As a developer, I want:
 
 ## <h2 id="development">2. Development Life Cycle</h2>
 
-This game is going to be developed in several phases and with a mobile first, functionality first mindset. 
-The first phase aims to deliver the MVP, a fully functional game with only strictly necessary features.
+I planned to develop the game in several phases and with a mobile first, functionality first mindset. 
+The first phase aimed to deliver the MVP, a fully functional game with only strictly necessary features: a heading, a feedback section and a playing section. The playing section included: the input fields, the submit button and the play button.
 
-Once the basic functionality has been added, I decided to move on to the second phase and integrate the imagery, to speed up the styling process. I will first focus on styling the game for mobile, which requires a separate approach due to the lack of space. I will divide the viewheight in perceintages and allow each feature a predetermined percent. I decided to start it from scratch in a separate mobile.html file, which will then become the game.html. I will work on it bottom up to see how I integrate the virtual keyboard, then the padlock, maybe the top buttons next and finally the feedback divs.
+However, after adding the basic functionality, I decided to move on to the second phase and integrate the imagery, to speed up the styling process. First, I focused on styling the game for mobile, which required a separate approach due to the lack of space. I decided that the mobile version would include: a header with UI buttons, a main with the background image of a dragon and two sections: a feedback section, and a play section; the play section would have a padlock background image and form input fields to submit player guess. The mobile view would also include a virtual keyboard in the footer. Since the default virtual keyboard takes about 40-50% of the viewheight and the numeric one only saves 10-20%, I decided to add a custom virtual keyboard and block the default one, to be able to control the amount of space it takes.I divided the viewheight in perceintages and allowed each feature a predetermined percent. I wanted work on it bottom up to see how I integrate the virtual keyboard, then the padlock, maybe the top buttons next and finally the feedback divs.
+
+After creating the html structure and css style for the custom virtual keyboard, the feedback received from my tutor was that the keys were too small, and to make this work I'd have to enlarge the keys and make a third row in the keyboard. This meant that I could save very little space and my custom keyboard would not meet its purpose. So I had to rethink the layout of the mobile view.
+
+I decided to move the UI buttons at the bottom of the page and take out the padlock image. Since the default numeric keyboard takes maximum 40% of the viewport height, I would have 60% left for the play and feedback areas.
 
 ## <h2 id="design">3. Design</h2>
 
 ### <h3 id="features">Features</h3>
-In the first phase there will be minimal features: a heading, a feedback section and a playing section. The playing section will include: the input fields, the submit button and the play button.
+The game includes two pages: index.html and game.html.
 
-In the second phase imagery will be added and the styling will be accordingly changed.
+Index.html page is fully responsive and has the following features: a heading with the title of the game, an image of a dragon's shadow, an image of a treasure chest and a play button, which links the game.html page.
 
-First I decided that the mobile version would include: a header with UI buttons, a main with the background image of a dragon and two sections: a feedback section, and a play section; the play section would have a padlock background image and form input fields to submit player guess. The mobile view would also include a virtual keyboard in the footer. Since the default virtual keyboard takes about 40-50% of the viewheight and the numeric one only saves 10-20%, I decided to add a custom virtual keyboard and block the default one, to be able to control the amount of space it takes.
+<img src="readme-assets/second-phase/home-page-mobile.png"> <img src="readme-assets/second-phase/home-page-tablet.png">
 
-After creating the html structure and css style for the custom virtual keyboard, the feedback received from my tutor was that the keys were too small, and to make it work I'd have to enlarge the keys and make a third row in the keyboard. This meant that I could only save very little space and my custom keyboard would not meet its purpose. So I had to rethink the layout of the mobile view.
 
- I decided to move the UI buttons at the bottom of the page and take out the padlock image. Since the default numeric keyboard takes maximum 40% of the viewport height, I would have 60% left for the play and feedback areas.
+For desktop view the page also includes the image of a dragon's head placed on the right bottom corner.
+
+<img src="readme-assets/second-phase/home-page-desktop.png">
+
+
+Game.html page has as a background image what I've called the Enchanted Realm:
+
+<img src="assets/images/enchanted-realm.webp">
+
+
+
+This is only partly visible in the game and will be fully revealed when winning. On top of this there is a light overlay and the shadow of the dragon centerd, symbolizing a guarded gate to be opened with the right key, the 4 digit key generated by the computer.
+
+<img src="readme-assets/second-phase/game-page-mobile.png">  <img src="readme-assets/second-phase/game-page-tablet.png">
+
+
+<img src="readme-assets/second-phase/game-page-desktop.png">
+
+
+Lower down there are four input fields and a try button to enter and submit player's guess.
+
+<img src="readme-assets/second-phase/input-fields.png">
+
+
+Once the guess is submitted, the 4 digit try and corresponding feedback are displayed in on the gate.
+
+<img src="readme-assets/second-phase/feedback-desktop.png">
+
+<img src="readme-assets/second-phase/feedback-mobile.png">
+
+
+The game page also features 3 user interface buttons. 
+
+<img src="readme-assets/second-phase/buttons.png">
+
+
+One of them has a dragon symbol and opens a story modal when clicked.
+
+<img src="readme-assets/second-phase/story-mobile.png">
+
+<img src="readme-assets/second-phase/story-desktop.png">
+
+
+The second one has a question mark symbol and opens an instructions modal.
+
+<img src="readme-assets/second-phase/instructions-mobile.png">
+
+<img src="readme-assets/second-phase/instructions-desktop.png">
+
+
+And the third on is a link to home page.
 
 ### <h3 id="typography">Typography</h3>
 I first experimented with the playful "Mistery Quest" Google Font for heading paired with the contrasting sans-serif "Roboto" for everything else.
