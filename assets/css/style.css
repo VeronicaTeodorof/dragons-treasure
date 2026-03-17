@@ -32,7 +32,7 @@
 
     background: -webkit-linear-gradient(45deg, hsla(236, 71%, 8%, 1) 30%, hsla(179, 55%, 75%, 1) 92%);
 
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#060823", endColorstr="#9EE3E2", GradientType=1 );
+    /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#060823", endColorstr="#9EE3E2", GradientType=1 ); */
 }
 
 .golden-gradient {
@@ -44,9 +44,31 @@
 
    background: -webkit-linear-gradient(90deg, hsla(50, 100%, 39%, 1) 19%, hsla(67, 87%, 82%, 1) 59%);
 
-   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C8A700", endColorstr="#F0F9A7", GradientType=1 );
+   /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C8A700", endColorstr="#F0F9A7", GradientType=1 ); */
 }
 
+/* || POSITION */
+.removed {
+    position: absolute;
+    top: -50%;
+}
+
+/* || FADE-OUT ANIMATION */
+.fade-out {
+    animation: fade-out 3s ease-out;
+    /* written with google search AI overview */
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+    0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    
+  }
+}
 /* Global styles */
  .home-body {
     min-height: 95vh;
@@ -198,11 +220,6 @@ input[type="submit"] {
     font-weight:500;
     border: 1px solid gold;
     margin-left: 0.7rem;
-}
-
-/* Images */
-.invisible {
-    display: none;
 }
 
 /* Play button */
