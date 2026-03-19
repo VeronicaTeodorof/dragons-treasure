@@ -225,10 +225,6 @@ time1 = time for image one animation;
 time2 += time1 //nothing happens until time1 has passed
 time3 += time2 //nothing happens until time2 has passed
 
-I wish myself goodluck! :>
-Yess!
-
-
 
 ## <h2 id="technologies">5. Technologies Used</h2>
 ### <h3 id="languages">Languages Used</h3>
@@ -313,6 +309,30 @@ I eventually found out how to differentiate betwwen different input event types 
 
 
 <img src="readme-assets/second-phase/move-focus-function-debugged.png">
+
+
+**The Variables Scope Bug**
+
+
+The current game.js file works, but it's like a house of cards; add anything to it and it tumbles down. The root cause of this is the fact that I wasn't able to access the values of the input fields in js file outside of the showData function, which is the event handler of the submit button and contains the e.preventDefault() method.
+
+To make the game work, I wrote everything needed from that point on inside showData(). I got a warning from my tutor that nested functions are not a good sign, and indeed, close to finishing the project this issue came back to haunt me, as any functionality I want to add only works (if it works), when added inside big, old showData():
+
+<img src="readme-assets/second-phase/show-data-function.png" style="height: 500px">
+
+And it doesn't end here.
+
+So I need to rethink and reconstruct that. The latest thing I've tried was to send values from input fields to js into showData(), from here send them back into the DOM in feedback section, and access them again in js from this feedback section outside the above mentioned function. This didn't work either.
+
+I eventually asked Claude AI: "I have a form in html, i want to access the input values in javascript so i have to wite a function to prevent event default and in the same function access the values. How do I then access the values outside of this function?"
+
+This is what I was doing wrong:
+
+<img src="readme-assets/second-phase/my-mistake.png">
+
+This is what I'll try: 
+
+<img src="readme-assets/second-phase/possible-solution.png" style="height: 300px">
 
 
 ### <h3 id="w3c">W3C Validation</h3>
