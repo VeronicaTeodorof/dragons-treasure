@@ -54,7 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function showData(e) {
         e.preventDefault();
         myForm = e.target;
+        processData();
+    }
 
+    function processData() {
         // Retrieve values entered by player
         let input1 = parseInt(myForm.input1.value);
         let input2 = parseInt(myForm.input2.value);

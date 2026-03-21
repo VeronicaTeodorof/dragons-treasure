@@ -347,6 +347,26 @@ I created an image with what I understood the logic of the functions chain would
 
 It still feels unnatural that the now separated functions still depend on eachother.
 
+Having asked my tutor about what the initial issue could have been, he sugessted that it could be related to the fact that I was trying to call showData(e) function in the global scope, which throws an error, because e doesn't exist when called directly.
+
+
+Going back to Claude AI to dig deeper into this I eventually realized where all this came from.
+In the section "Getting form data" in Code Institute's course, both runnable examples showed simple submit event handler functions that were also accessing input data; for instance: 
+<pre>
+
+ function showData(e) {
+        e.preventDefault();
+        const formData = e.target;
+        const message = document.getElementById("message");
+        message.innerText = `First name: ${formData["first-name"].value}. Email address: ${formData.email.value}.`;
+ }
+</pre>
+
+And I believe most if not all examples I've checked in other sources showed the same thing: a submit event handler that was preventing default behaviiour (page refreshing), declaring form variable and assigning it as the target of the event parameter, and also somehow accessing data from input fields. So my instinct was to copy that. I later realized that I could declare the form variable in the global scope, but still it didn't cross my mind that I could also access the values of the input fields in functions other than showData(e).
+
+So now I'll try this: showData(e) will only prevent event default, and call another function that accesses the input values. Nothing else.
+
+
 
 ### <h3 id="w3c">W3C Validation</h3>
 
