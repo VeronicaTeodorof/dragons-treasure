@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function winLose(correctedAnswer, count) {
-        if(correctedAnswer[0] === 4 && count > 0) {
+        if(correctedAnswer[0] === 4) {
             alert("You won");
         } else if(correctedAnswer[0] !== 4 && count === 0) {
             alert("You lost!");
