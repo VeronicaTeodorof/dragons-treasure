@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
         spanGuess.innerText = `${input1} ${input2} ${input3} ${input4}`;  
         // Removes guess-span class from the filled span, so that the next span is then selected
         spanGuess.classList.remove("guess-span");
-
-        checkAnswer(guessCode);
         count--;
+        checkAnswer(guessCode);
+        
         console.log(count)
         myForm.reset(); 
         
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function winLose(correctedAnswer, count) {
         if(correctedAnswer[0] === 4 && count > 0) {
             alert("You won");
-        } else if(correctedAnswer[0] !== 4 && count === 1) {
+        } else if(correctedAnswer[0] !== 4 && count === 0) {
             alert("You lost!");
         }
     }
