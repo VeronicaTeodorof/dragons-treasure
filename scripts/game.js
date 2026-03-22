@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const submitButton = document.getElementById("submit");
     let computerCode = generateCode();
     let myForm = document.querySelector("form");
+    let triesLeft = document.querySelector(".tries-left");
     let count = 10;
 
     
@@ -70,11 +71,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // Removes guess-span class from the filled span, so that the next span is then selected
         spanGuess.classList.remove("guess-span");
         count--;
+        countTries(count);
         checkAnswer(guessCode);
         
         console.log(count)
         myForm.reset(); 
         
+    }
+
+    function countTries(count) {
+        if(count === 1) {
+            triesLeft.innerText = "1 try left"
+        } else {
+            triesLeft.innerHTML = `${count} tries left`;
+        }
     }
 
     function checkAnswer(guessCode) {

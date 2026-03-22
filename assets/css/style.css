@@ -222,6 +222,19 @@ input[type="submit"] {
     margin-left: 0.7rem;
 }
 
+.tries-left {
+    color: white;
+    font-size: 1.3rem;
+    top: 65%;
+    font-family: cursive;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+   
+    border: 2px solid gold;
+    padding: 0.5rem;
+}
+
+
 /* Play button */
 #play-button {
     font-family: var(--primary-font);
