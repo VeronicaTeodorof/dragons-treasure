@@ -456,7 +456,7 @@ input[type="submit"] {
 }
 
 .fire {
-    animation: fire-animation 8.5s ease;
+    animation: fire-animation 9.5s ease;
     animation-fill-mode: both;
 }
 
@@ -465,15 +465,19 @@ input[type="submit"] {
         transform: scale(0);
         opacity: 0;
     }
-    98% {
+    90% {
         transform: scale(0);
         opacity: 0;
     }
-    100% {
+    92% {
         transform: scale(1);
         opacity: 1;
     }
+    100% {
+        opacity: 0;
+    }
 }
+
 
 
 /*----------------------------------*/

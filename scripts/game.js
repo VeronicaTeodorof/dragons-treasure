@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let myForm = document.querySelector("form");
     let triesLeft = document.querySelector(".tries-left");
     let darkOverlay = document.querySelector(".dark-overlay");
+    const fieldset = document.querySelector("fieldset");
     const inputBoxes = document.querySelectorAll(".input");
     const disappear = document.querySelector(".disappear");
     const footer = document.querySelector("footer");
+    const loseDiv = document.querySelector(".lose-events-wrapper");
     console.log(darkOverlay);
     let count = 10;
 
@@ -161,8 +163,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function disableForm() {
-        inputBoxes.setAttribute("disabled", "");
-        submitButton.classList(".pointers-disabled")
+        fieldset.setAttribute("disabled", "");
+        submitButton.classList.add(".pointers-disabled");
+        
     }
 
     myForm.addEventListener("submit", showData);
