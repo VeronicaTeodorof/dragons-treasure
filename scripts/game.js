@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let myForm = document.querySelector("form");
     let triesLeft = document.querySelector(".tries-left");
     let darkOverlay = document.querySelector(".dark-overlay");
+    const inputBoxes = document.querySelectorAll(".input");
     const disappear = document.querySelector(".disappear");
     const footer = document.querySelector("footer");
     console.log(darkOverlay);
@@ -23,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Moves focus to the next input field after one digit has been inserted
     function moveFocus() {
-        let inputBoxes = document.querySelectorAll(".input");
-
-        for(let i=0; i<inputBoxes.length-1; i++) {
+       for(let i=0; i<inputBoxes.length-1; i++) {
             inputBoxes[i].addEventListener("input", (event) => {
                 if (event.inputType !== "deleteContentBackward") {
                     inputBoxes[i+1].focus();
@@ -153,9 +152,17 @@ document.addEventListener("DOMContentLoaded", function() {
         if(correctedAnswer[0] === 4) {
             disappear.classList.add("fade-out", "pointers-disabled");
             footer.classList.add("fade-out", "pointers-disabled");
+            disableForm();
         } else if(correctedAnswer[0] !== 4 && count === 0) {
             darkOverlay.classList.remove("removed");
+            disableForm();
         }
+        
+    }
+
+    function disableForm() {
+        inputBoxes.setAttribute("disabled", "");
+        submitButton.classList(".pointers-disabled")
     }
 
     myForm.addEventListener("submit", showData);
