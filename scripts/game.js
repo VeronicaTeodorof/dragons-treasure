@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let myForm = document.querySelector("form");
     let triesLeft = document.querySelector(".tries-left");
     let darkOverlay = document.querySelector(".dark-overlay");
+    const disappear = document.querySelector(".disappear");
+    const footer = document.querySelector("footer");
     console.log(darkOverlay);
     let count = 10;
 
@@ -149,7 +151,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function winLose(correctedAnswer, count) {
         if(correctedAnswer[0] === 4) {
-            alert("You won");
+            disappear.classList.add("fade-out");
+            footer.classList.add("fade-out");
         } else if(correctedAnswer[0] !== 4 && count === 0) {
             darkOverlay.classList.remove("removed");
         }
