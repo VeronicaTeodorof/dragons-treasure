@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let computerCode = generateCode();
     let myForm = document.querySelector("form");
     let triesLeft = document.querySelector(".tries-left");
+    let darkOverlay = document.querySelector(".dark-overlay");
+    console.log(darkOverlay);
     let count = 10;
 
     
@@ -149,11 +151,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if(correctedAnswer[0] === 4) {
             alert("You won");
         } else if(correctedAnswer[0] !== 4 && count === 0) {
-            alert("You lost!");
+            darkOverlay.classList.remove("removed");
         }
     }
-
-    
 
     myForm.addEventListener("submit", showData);
     
