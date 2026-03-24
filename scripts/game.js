@@ -152,8 +152,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function winLose(correctedAnswer, count) {
         if(correctedAnswer[0] === 4) {
+            const winModal = new bootstrap.Modal('#winModal');
+            const winDelay = 3000;
             disappear.classList.add("fade-out");
             footer.classList.add("fade-out", "pointers-disabled");
+            delayModal(winModal, winDelay);
             disableForm();
         } else if(correctedAnswer[0] !== 4 && count === 0) {
             const loseModal = new bootstrap.Modal('#loseModal');

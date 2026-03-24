@@ -71,7 +71,7 @@
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Drake guards the entrance to the Enchanted Realm where all the dargons' riches lie.</p>
+                    <p>Drake guards the entrance to the Enchanted Realm where all the dragons' riches lie.</p>
                     <P>Guess the 4 digit key in 10 tries or less, and he'll let you pass.</P>
                     <P>Fail, and...well, better not fail...</P>
                 </div>
@@ -89,14 +89,14 @@
         <div class="modal-dialog">
             <div class="modal-content old-paper">
                 <div class="modal-body">
-                    <p class="display-1 text-center"> You Lost!</p>
+                    <p class="display-1 text-center"> You Fool!</p>
                     <p>Fear not Drake, but your ignorance...</p>
                     <p>Rid it, and you shall pass!</p>
+                </div>
+                 <div class="modal-footer border-0">
                     <button type="button" class="btn modal-button" data-bs-dismiss="modal" onclick="location.href='game.html'">
                         Play again
                     </button>
-                </div>
-                 <div class="modal-footer border-0">
                     <button type="button" class="btn modal-button" data-bs-dismiss="modal">Review</button>
                     <button type="button" class="btn modal-button" data-bs-dismiss="modal" onclick="location.href='index.html'">Home</button>
                 </div>
@@ -104,6 +104,27 @@
         </div>
     </div>
 
+    <!-- Win Modal -->
+     <div class="modal fade-in" id="winModal" data-bs-backdrop="static"  data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content old-paper">
+                <div class="modal-body text-center">
+                    <p class="display-5"> Welcome to the Enchanted Realm!</p>
+                    <p>Your WISDOM is the gate opener,</p>
+                    <p>Your COURAGE, the dragon tamer,</p>
+                    <p>Your TRUE HEART, the light kindler!</p>
+                    <p>THEY are your riches, the treasure is yours! </p>
+                </div>
+                 <div class="modal-footer border-0">
+                    <button type="button" class="btn modal-button" data-bs-dismiss="modal" onclick="location.href='game.html'">
+                        Play again
+                    </button>
+                    <button type="button" class="btn modal-button" data-bs-dismiss="modal">Review</button>
+                    <button type="button" class="btn modal-button" data-bs-dismiss="modal" onclick="location.href='index.html'">Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main -->
     <main>
