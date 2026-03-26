@@ -417,6 +417,7 @@ https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
 
 **JavaScript**
 https://developer.mozilla.org/
+https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript for JS Best Practices
 
 ### <h3 id="documentation">Documentation</h3>
 
