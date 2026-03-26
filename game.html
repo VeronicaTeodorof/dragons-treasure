@@ -45,13 +45,16 @@
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Enter a 4 digit key and press Enter or press/click Try.</p>
+                    <p>Enter a 4 digit key and press Enter or press/click Try.
+                     Digits allowed are in the range: 0 to 9. The secret key may contain repeated digits e.g.1123.
+                    </p>
                     <p>Your guess will be displayed alongside a feedback:</p>
                     <P>⚪ is a correct digit in the correct place;</P>
                     <p>🔴 is a correct digit incorrectly placed;</p>
                     <p>❌ is an incorrect digit.</p>
                     <p>The order of the symbols in feedback does not relate to the order of the digits in your guess.
                        ⚪ if any, will always be displayed first, 🔴 if any, will be displayed second, and ❌ last.
+                       E.g. For Secret Key: 9981, Guess: 8881 would give Feedback: ⚪⚪❌❌.
                     </p>
                     <button type="button" class="btn modal-button text-align-right" data-bs-dismiss="modal">Close</button>
                 </div>
