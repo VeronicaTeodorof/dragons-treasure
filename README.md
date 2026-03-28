@@ -344,8 +344,9 @@ For wiring up final modal, I used setTimeout().
 
 ## <h2 id="technologies">5. Technologies Used</h2>
 ### <h3 id="languages">Languages Used</h3>
-HTML has been used to shape the skeleton of the game page.
-CSS has been used to style the page.
+HTML has been used to shape the skeleton of the pages.<br>
+CSS has been used to style the pages.<br>
+JavaScript has been used for the functionality of the game.
 
 ### <h3 id="frameworks">Frameworks, Libraries & Programs Used</h3>
 
@@ -353,33 +354,60 @@ Git - for version control;
 
 Github - to save and store the files for the game;
 
+Bootstrap Version 5.3 - mainly for the modals;
+
+Google Dev Tools - mainly to test and troubleshoot responsiveness issues;
+
 Google Fonts - for the fonts used in the game;
+
+https://pythontutor.com/ - for debugging;
+
+https://www.favicon-generator.org/ - for generating favicon;
 
 https://coolors.co/ for creating the colour pallette;
 
-https://www.freeconvert.com/ for converting images to webp format
+https://www.freeconvert.com/ for converting images to webp format;
 
-https://www.remove.bg/ for removing image background
+https://www.remove.bg/ for removing image background;
 
-https://imagecolorpicker.com/ for picking colors from images
+https://imagecolorpicker.com/ for picking colors from images;
 
-https://www.favicon-generator.org/ for generating the favicon used on the site
+https://www.favicon-generator.org/ for generating the favicon used on the site;
 
-https://wave.webaim.org/ and lighthouse to test accessibility
+https://wave.webaim.org/ and lighthouse to test accessibility;
+
+https://validator.w3.org/ for html validation;
+
+https://jigsaw.w3.org/css-validator/ for css validation;
+
+https://www.jslint.com/ for javascript validation
+
+https://claude.ai/ for help in the final part of the project.
 
 ## <h2 id="deployment-and-development">6. Deployment and Local Development
 ### <h3 id="deployment">Deployment</h3>
 
-The live website was deployed using GitHub Pages at: <a href="https://veronicateodorof.github.io/code-breaking-game/">https://veronicateodorof.github.io/code-breaking-game/</a> 
+The live website was deployed using GitHub Pages at: https://veronicateodorof.github.io/dragons-treasure/index.html
 
 Instructions on how to achieve this can be found below:
 
 1. Log into your GitHub account (or sign up if you don't have one).
-2. Go to the repository for this project: <a href="https://github.com/VeronicaTeodorof/code-breaking-game/">https://github.com/VeronicaTeodorof/code-breaking-game</a>.
+2. Go to the repository for this project: https://veronicateodorof.github.io/dragons-treasure/index.html
 3. Click on the Settings link on the right hand side of the top navigation bar.
 4. In the left hand side navigation bar click on the Pages link.
 5. Under the Build and deployment header, in the Source section, select main branch from the dropdown menu. Make sure Root is selected in the dropdown select folder menu.
 6. Click Save. The live GitHub Pages website is now deployed at the URL shown.
+
+
+### <h3 id="local development">Local Development</h3>
+
+How to Clone To clone the en-avant-ballet-school repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, https://github.com/VeronicaTeodorof/dragons-treasure
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ## <h2 id="testing">7. Testing</h2> 
 
