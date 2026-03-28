@@ -33,6 +33,7 @@ This is a trial and error game which seeks to develop critical thinking and logi
 - <a href="#features">Features</a>
 - <a href="#typography">Typography</a>
 - <a href="#colours">Colour Scheme</a>
+- <a href="#animations">Animations</a>
 - <a href="#wireframes">Wireframes</a>
 
 ### <a href="#functionality">4. Functionality
@@ -113,7 +114,7 @@ At this point some styling would have been the last part of the MVP, but I decid
 
 The second phase started with some failed attempts, a short time break (sometimes the world throws at you obstacles to overcome, just like in the stories you're writing about), and a change in mentality: I started to consider using AI due to time constraints.<br>
 And then the magic happened (just like in the stories you're writing about); a magic combination of chance, healing spells, and team spirit.<br>
-I found the book "Dragon World" and I understood what a dragon treasure should look like. I started looking for it, and I found my winning image, an AI generated one, which normally would have been enough to make me reject it, but I didn't. And from there everything started to connect.
+I found the book "Dragon World" and I understood what a dragon treasure should look like: gems, not precious metals as I thought. I started looking for it, and I found my winning image, an AI generated one, which normally would have been enough to make me reject it, but I didn't. And from there everything started to connect.
 
 ### <h3 id="in-the-game">The Story in the Game</h3>
 You are finally there, the Enchanted Realm lies before your eyes, and you can almost see its glows through the dark gate. Drake is there to guard.
@@ -264,33 +265,81 @@ This is the general colour pallette used in the final design:
 
 All other secondary colours used are either a reminiscence of the initial colour scheme, or they were selected ad-hoc in vscode after many tries, for the way they looked and felt, and were possible, validated with lighthouse for accessibility.
 
+
+### <h3 id="animations">Animations</h3>
+While the winning event is just a fade-out animation, the losing event was one of the most exciting parts of the project, not just for me but for my team as well: how will the dragon blow fire? I considered using spritesheets, videos, then I wanted to settle for some fire being blown directly on the game page as if from behind the gate, but I was TOLD there had to be a REAL dragon, and a REAL fire. So I gave ChatGPT the dragon image I'm using in the game and asked it to create a REAL dragon; it was horrible. When I asked it to animate the dragon, it made the poor creature look like smoking...<br>
+I eventually found my Drake on Pixabay, an AI generated image again,<br>
+<img src="assets/images/drake1.webp" style="height:300px"><br>
+ and I found an image of a fire background,<br>
+<img src="assets/images/fire-background1.webp" style="height:300px"><br>
+ and then I had to think about putting them together in an animation. The final timing of the animation was decided by my team. My husband gave me the reference to what it should look like: https://www.youtube.com/watch?v=UtaMA1eQyDs. My son helped me time it. When they were happy, I was happy.
+
 ### <h3 id="wireframes">Wireframes</h3>
 [First phase wireframes](readme-assets/first-phase/first-phase-wireframe.png)
 
 
-[Second phase wireframes](readme-assets/second-phase/mobiile-wireframe-phase2.png)
+[Second phase wireframes/ failed virtual keyboard version](readme-assets/second-phase/mobiile-wireframe-phase2.png)
+
+
+Final wireframes:<br>
+[Home page](readme-assets/second-phase/wireframe-home.png)<br>
+[Game page](readme-assets/second-phase/wireframe-play.png)<br>
+[404 page](readme-assets/second-phase/wireframe404.png)
 
 ## <h2 id="functionality">4. Functionality</h2>
-To see the picture of how the basic game would work I designed a [flowchart](readme-assets/first-phase/flowchart.pdf). Then I sketched the basic js [structure](readme-assets/first-phase/js-structure.png).
+In the beginning there was the pseudo-code.<br> One of those lucky times when I actually listened to my tutor's advice before, not after getting in trouble.<br>
+The first version was defective:
+[first pseudo-code version page 1](readme-assets/second-phase/pseudo-code-1a.png); 
+[first pseudo-code version page 2](readme-assets/second-phase/pseudo-code1b.png)<br>
+My tutor pointed that to me and gave the edge cases that my pseudo-code didn't account for. 
+He gave me an example of psudo-code which included meaningful variable names, unlike mine, and these are the variable names I used in my actual code.<br>
+Then he gave me the magic key: "You may need to remove the matching pairs"<br>
+And indeed I had to.<br>
+[logic and pseudo-code: page1](readme-assets/first-phase/final-pseudo1.png);
+[page2](readme-assets/first-phase/final-pseudo2.png);
+[page3](readme-assets/first-phase/final-pseudo3.png);
+[page4](readme-assets/first-phase/final-pseudo4.png).
 
-countTries function https://www.tutorialspoint.com/article/how-to-count-the-number-of-times-a-button-is-clicked-using-javascript#
 
-**Animations**
+To see the picture of how the basic game would work I designed a [flowchart](readme-assets/first-phase/flowchart.pdf).<br>
+Then I sketched the basic js [structure](readme-assets/first-phase/js-structure.png).
 
 
+Still I was scared to start my first js file, when my tutor gave me another key: "The best code for your first project is the one that works."
+And I wrote the functionality for the basic game. It was working, so acceptable.
+
+
+But then there came my tutor's warning about nested functions, which later came back to haunt me (see variable scope bug in "Solved Bugs").
+I sorted this with both my tutor's and Calude AI's help.
+
+
+In the final stages of the project, I tried rewrite parts of my js file to follow best practices as per: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript. And finally, I validated with JS Lint; after a couple of hours of chasing trailing spaces and counting characters, I gave up and asked Claude AI to rewrite my js so as to pass the validation. What it did: removed remaining trailing spaces, split my remaining long lines to meet the accepted limit, added ignore as a parameter to my moveFocus function and taught me why, replaced variable name computerCode with code in my generateCode function, so that it didn't overshadow the global computerCode variable, replaced all my  ++ increments and -- decrements with += and -=, and transferred my block scope i, j, k, index variables to function scope.
+
+
+**Key moments in writing my js file:**<br>
+- removing the matching pair after finding numCorrect without changing the initial arrays (I explain in code how I eventually sorted it);
+- removing the matching pair after finding numIncorrectlyPlaced (I was assigning the spliced array back to the initial array variabel and it didn't work obviously; sorted with AI tutor function in Python tutor);
+- unnesting functions from showData() (see solved bugs);
+
+**Also:**
 **Lose Event Animation**
-For this event I'm trying to chain 2-3 images to obtain a cinematic animation: 
+For this event I've tried to chain 2 images alternating with a dark background and a final modal to obtain a cinematic feel: 
 - dark background covers the game page
-- image of a dragon appears and dissapears
-- (optional, either here or maybe as a background modal) fullscreen fire image;
+- image of a dragon appears and disappears
+- dark background remains
+- fullscreen fire image appears and disappears
+- dark background
+- modal;
 
-So far I've failed to chain these images, having tried with animation-delay. I will now try to start them all at the same time using the following strategy: 
+So far I've initially failed to chain the images, having tried with animation-delay. I then tried to start them all at the same time using the following strategy: 
 time1 = time for image one animation;
 time2 += time1 //nothing happens until time1 has passed
 time3 += time2 //nothing happens until time2 has passed
+This approach worked.<br>
+For wiring up final modal, I used setTimeout().
 
-This approach is working.
-For wiring up losing text message and UI buttons at the end of the animation I'm planning to use animationend event (resource: https://www.w3schools.com/jsref/event_animationend.asp).
+
+**Review Screen** also required planning: listing events i wanted for each win and lose situation, finding common events, wirting a function for that, and then writing separate functions for the remaingng events in lose and win situation respectively.
 
 
 ## <h2 id="technologies">5. Technologies Used</h2>
@@ -477,6 +526,9 @@ After changing button size and margin, the accessibility issue was solved:
 ### <h3 id = "resources">Resources</h2>
 **Bootstrap Modals**
 https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+
+**Functions**
+countTries function https://www.tutorialspoint.com/article/how-to-count-the-number-of-times-a-button-is-clicked-using-javascript#
 
 **JavaScript**
 https://developer.mozilla.org/
