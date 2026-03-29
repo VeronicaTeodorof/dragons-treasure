@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const triesLeft = document.querySelector(".tries-left");
     const darkOverlay = document.querySelector(".dark-overlay");
     const fieldset = document.querySelector("fieldset");
-    const inputBoxes = document.querySelectorAll(".input");
+    // Array.from() converts the NodeList into an array
+    // array needed to apply find method in moveFocus
+    const inputBoxes = Array.from(document.querySelectorAll(".input"));
     const disappear = document.querySelector(".disappear");
     const footer = document.querySelector("footer");
     const loseModal = new bootstrap.Modal("#loseModal");
@@ -39,7 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
             inputBoxes[i].addEventListener("input", function (event) {
                 if (event.inputType !== "deleteContentBackward") {
                     if (i < inputBoxes.length - 1) {
-                        inputBoxes[i + 1].focus();
+                        // Refactored with Claude AI to meet UX expectations
+                        // find returns the first element meeting the condition
+                        // box is the callback parameter representing each input box
+                        // arrow function used as the condition for find
+                        // ?. optional chaining guards against undefined if all boxes filled
+                        const nextEmpty = inputBoxes.find(box => box.value === "" && box !== inputBoxes[i]);
+                        nextEmpty?.focus();
                     }
                 }
             });
