@@ -80,6 +80,18 @@
 | UI-36 | Lose modal | Lose message and play again, review, and home buttons are displayed | Pass |
 | UI-37 | Review | Modal disappears, board is revealed, play again button is revealed, key is revealed, footer with game buttons are revealed, pointers on buttons are active | Pass |
 
+### Game Logic
+
+| Test ID | Test | Expected Result | Pass/Fail |
+| ------- | ---- | --------------- | --------- |
+| GL-01 | All correct digits in correct positions (computerCode: 3,9,4,3, guessCode: 3,9,4,3) | 4 white dots, 0 red dots, win condition triggered | Pass |
+| GL-02 | All incorrect digits (computerCode: 7,6,2,3 guessCode: 0,1,4,8) | 0 white dots, 0 red dots | Pass |
+| GL-03 | All correct digits in wrong positions (computerCode: 7,6,2,3 guessCode: 6,3,7,2) | 0 white dots, 4 red dots | Pass |
+| GL-04 | Mix of correct and incorrect digits (computerCode: 3,9,4,3, guessCode: 3,4,7,8) | 1 white dot and 1 red dot displayed | Pass |
+| GL-05 | Repeated digit in guessCode, not in computerCode (computerCode 1,2,3,4, guessCode 1,1,2,3) | 1 white dot, 2 red dots | Pass |
+| GL-06 | Repeated digit in computerCode, not in guessCode (computerCode 1,1,2,3, guessCode 1,2,3,4) | 1 white dot, 2 red dots | Pass |
+| GL-07 | Guess with all identical digits (computerCode: 0,9,4,3, guessCode: 0,0,0,0) | 1 white dot, 0 red dots | Pass |
+
 
 ## Unit Testing
 
@@ -93,7 +105,7 @@
 
 | Test ID | Description | Expected Output | Actual Output | Pass/Fail |
 | ------- | ---- | --------------- | --------- | ------- |
-| UT-02 | processData() | correctly retrieves inputs as guessCode array | Inputs are correctly retrieved and parsed as integers e.g. [1,2,3,4] | [1,2,3,4] | Pass |
+| UT-02 | processData() correctly retrieves inputs as guessCode array | Inputs are correctly retrieved and parsed as integers e.g. [1,2,3,4] | [1,2,3,4] | Pass |
 
 ### Algorithm checkAnswer()
 
@@ -104,7 +116,7 @@
 | UT-05 | Checks that all digits other than correctly guessed ones in computerCode are pushed into the splicedComputerCode | [0,9,5,9] | [0,1,2,3] | 9,5,9 | 9,5,9| Pass |
 | UT-06 | Checks the number of incorrectly placed digits in guessCode | [9,2,0,8] | [0,1,2,3] | numIncorrectlyPlaced: 2 | numIncorrectlyPlaced: 2 | Pass |
 | UT-07 | Mix of correct, incorrectly placed, and incorrect digits | [0,5,0,1] | [0,1,2,3] | [1,1,2] | [1,1,2] | Pass |
-| UT-08 | All correct digits in correct positions | [5,7,8,3] | [5,7,8,3] | [4,0,0,] | [4,0,0] | Pass |
+| UT-08 | All correct digits in correct positions | [5,7,8,3] | [5,7,8,3] | [4,0,0] | [4,0,0] | Pass |
 | UT-09 | No correct digits | [1,2,3,4] | [5,6,7,8] | [0,0,4] | [0,0,4] | Pass |
 | UT-10 | All correct digits in wrong positions | [8,0,2,0] | [0,2,0,8] | [0,4,0] | [0,4,0] | Pass |
 | UT-11 | Repeated digit in guessCode, not in computerCode | [1,5,9,4] | [1,1,5,6] | [1,1,2] | [1,1,2] | Pass |
