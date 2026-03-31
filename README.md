@@ -410,7 +410,7 @@ How to Clone To clone the en-avant-ballet-school repository:
  **My tutor's feedback on final design**
  After implementing second phase design, my tutor's feedback was that I should keep the submit button everywhere (I intended to remove it completely from the mobile view because of the lack of space); he said that mobile users do not use the enter key on a virtual keyboard much and therefore I needed a dedicated button that I could even align with the form inputs to save space.  He also suggested increasing font size of the feedback and guess on the desktop view and changing some colous in the feedback for better visibility.
 
- **Instructions**
+ **Instructions**<br>
  I gave the almost finished game to a few friends and family to try. It so happened that none of them had played a Mastermind type of game before, and they all (100%) found the game confusing. Although I had mentioned in the instructions that the order of the symbols in the feedback does not relate to the order of the digits in the guess, they all believed the opposite. After chatting with Claude AI, it pointed to some gaps in my instructions: the missing digit range, not mentioning that repeated digits are allowed, not giving examples. I adjusted my instructions to include the above and I gave the example: secret key 9981, guess key 8881 gives feedback ⚪⚪❌❌, which is for most counterintuitive, 
  but I hoped it caught the essence of the game. 
 
@@ -422,7 +422,6 @@ How to Clone To clone the en-avant-ballet-school repository:
 ### <h3 id="solved-bugs">Solved Bugs</h3>
 
 **Missallingnment Bug**
-
 
 After including Bootstrap in game.html page, the text of the guess span was vertically aligned at the base of its container, while the content of the feedback span was centered. This caused a noticeable missalignment between the two. 
 I tried to rectify it with bootstrap classes: "allign-middle", "allign-bottom", "allign-text-bottom", "allign-text-top", but none of them had any effect.
@@ -442,16 +441,14 @@ This was corrected by changing the second loosing condition:
 
 
 **Interactivity: Pointer Bug**
- Vlad Boitos discovered that input fields still produce visible feedback after win fade-out animation id played, even though they are not visible themselves. I checked and discovered that the now invisible UI buttons also trigger their specific actions when clicked.
+ Vlad Boitos discovered that input fields still produce visible feedback after win fade-out animation played, even though they were not visible themselves. I checked and discovered that the now invisible UI buttons also trigger their specific actions when clicked.
  I tried to sort this issue by adding display none to relevant sections when animation ends, using animationend event. This solved the input fields issue (no visible feedback given), but not the buttons. I tried negative positioning relevant sections and tests passed.
  I asked Claude AI if that was a good fix and it sugessted there were better fixes than trying to solve an interactivity problem with a positioning solution, and added that negative positioning can sometimes trigger unexpected scroll or overflow behaviout. It suggested looking up pointer-event css property (good resource: https://mimo.org/glossary/css/pointer-events). This approach works better and sorted the issue.
 
 
-### <h3 id="known-bugs">Known Bugs</h3>
-
+ 
 
 **The Backspace Bug**
-
 
 Early in the development process my tutor told me that when a user is required to enter a four digit code, they would expect the cursor to automatically jump to the next input field after the previous one has been filled.
 I accomplished that with the following code: 
@@ -465,31 +462,26 @@ I eventually found out how to differentiate betwwen different input event types 
 
 <img src="readme-assets/second-phase/move-focus-function-debugged.png">
 
+I then refined the function even more, with AI assistance, to move the focus to the next empty field, for better UX:
+<img src="readme-assets/second-phase/next-empty-field.png">
+
 
 **The Variables Scope Bug**
 
 
-The current game.js file works, but it's like a house of cards; add anything to it and it tumbles down. The root cause of this is the fact that I wasn't able to access the values of the input fields in js file outside of the showData function, which is the event handler of the submit button and contains the e.preventDefault() method.
+After writing the code for the basic functionality, it worked, but it was like a house of cards; add anything to it and it tumbled down. The root cause of this was the fact that I wasn't able to access the values of the input fields in js file outside of the showData function, which is the event handler of the submit button and contains the e.preventDefault() method.
 
-To make the game work, I wrote everything needed from that point on inside showData(). I got a warning from my tutor that nested functions are not a good sign, and indeed, close to finishing the project this issue came back to haunt me, as any functionality I want to add only works (if it works), when added inside big, old showData():
+To make the game work, I wrote everything needed from that point on inside showData(). I got a warning from my tutor that nested functions are not a good sign, and indeed, close to finishing the project this issue came back to haunt me, as any functionality I want to add only worked (if it works), when added inside big, old showData():
 
 <img src="readme-assets/second-phase/show-data-function.png" style="height: 500px">
 
-And it doesn't end here.
+And it didn't end here.
 
-So I need to rethink and reconstruct that. The latest thing I've tried was to send values from input fields to js into showData(), from here send them back into the DOM in feedback section, and access them again in js from this feedback section outside the above mentioned function. This didn't work either.
+So I needed to rethink and reconstruct that. One of the things I've tried was to send values from input fields to js into showData(), from here send them back into the DOM in feedback section, and access them again in js from this feedback section outside the above mentioned function. This didn't work either.
 
 I eventually asked Claude AI: "I have a form in html, i want to access the input values in javascript so i have to wite a function to prevent event default and in the same function access the values. How do I then access the values outside of this function?"
 
-This is what I was doing wrong:
-
-<img src="readme-assets/second-phase/my-mistake.png">
-
-This is what I'll try: 
-
-<img src="readme-assets/second-phase/possible-solution.png" style="height: 300px">.
-
-From my conversation with Claude AI I understood that part of the problem was where the event listener on submit button was called. So I moved it to the bottom of the file.
+From my conversation with Claude AI I understood that part of the problem was where the event listener on submit button was called. So I moved it to the bottom of the file. (My tutor made me realize later on that this was not the problem.)
 
 
 Then I tried to unnest the functions from inside showData(e) by passing the input values accessed by it and grouped in guessCode array variable, as a parameter to another function checkAnswer(guessCode) and call it from inside showData(e). This way input data travelled down from function to function without the need of having it in the global scope.
@@ -505,7 +497,7 @@ It still feels unnatural that the now separated functions still depend on eachot
 Having asked my tutor about what the initial issue could have been, he sugessted that it could be related to the fact that I was trying to call showData(e) function in the global scope, which throws an error, because e doesn't exist when called directly.
 
 
-Going back to Claude AI to dig deeper into this I eventually realized where all this came from.
+Going back to Claude AI to dig deeper into this I realized that another cause for cramming everything into one function was my missunderstanding that i had to access input values from the event handler function.
 In the section "Getting form data" in Code Institute's course, both runnable examples showed simple submit event handler functions that were also accessing input data; for instance: 
 <pre>
 
@@ -519,7 +511,20 @@ In the section "Getting form data" in Code Institute's course, both runnable exa
 
 And I believe most if not all examples I've checked in other sources showed the same thing: a submit event handler that was preventing default behaviiour (page refreshing), declaring form variable and assigning it as the target of the event parameter, and also somehow accessing data from input fields. So my instinct was to copy that. I later realized that I could declare the form variable in the global scope, but still it didn't cross my mind that I could also access the values of the input fields in functions other than showData(e).
 
-So now I'll try this: showData(e) will only prevent event default, and call another function that accesses the input values. Nothing else.
+I have rewritten the functions so that showData(e) will only prevent event default, and call another function, processData(), that accesses the input values. 
+
+
+### <h3 id="known-bugs">Known Bugs</h3>
+
+**Win Animation Glitch**
+
+The backdrop of the win modal darkens a fraction of a second before the modal appears. This breaks the smooth flow of the animation. This is a Bootstrap setting and I've tried different fixes, but they gave me even worse results so I decided to keep it as it is.
+I would gladly give up the backdrop altogether, but I need it to be set on static so that the player is not able to close the modal, and get stuck on the win image, by clicking the backdrop.
+
+**Virtual Keyboard Covering Game Buttons**
+
+My friend Evelyn Chan suggested I moved the game buttons at the top of the page, as they are not visible during play on mobile view and her son, Marcus Ip, only discovered them at his second attempt to play the game. I left it as it is for the moment and I'll have to further consider this in the future. 
+Placing the buttons at the bottom was a deliberate choice determined by the lack of space on mobile view; the top part has to go to the feedback and input fields; they all have to stay visible at all times during play. I also deliberately chose not to set auto-focus on first input at the beginnig of the game, to make the buttons visible. But then, after each submit, the auto-focus is set to make the flow of the game smoother.
 
 
 ### <h3 id="w3c">W3C Validation</h3>

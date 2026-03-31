@@ -18,7 +18,6 @@
    - <a href="#game-page">Game Page</a>
    - <a href="#not-found">404 Page</a>
 4. <a href="#appendix">Appendix: UT - Screenshots</a>
-5. <a href="#notes">Notes</a>
 
 
 ## <h2 id="ui-testing">1. UI Testing</h2>

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Moves focus to the next input field after one digit has been inserted
+    // Moves focus to the next empty input field after one digit has been inserted
     function moveFocus() {
         inputBoxes.forEach(function (ignore, i) {
             inputBoxes[i].addEventListener("input", function (event) {
