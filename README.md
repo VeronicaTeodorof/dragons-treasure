@@ -9,6 +9,8 @@
 >
 > Fail, and... well, better not fail...
 
+Live link: https://veronicateodorof.github.io/dragons-treasure/index.html <br>
+
 
 **Dragons' Treasure** is a computer codebreaking game similar to the paper and pencil game [bulls and cows](https://en.wikipedia.org/wiki/Bulls_and_cows) or [pigs and bulls](https://en.wikipedia.org/wiki/Bulls_and_cows) in that it uses digits for the code, the difference being that in the paper and pencil game digits must be all different, while in the computer version repetitions are permitted. In this aspect this game is more similar to the board game [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)), which uses colours for the code and repetitions are permitted.
 
@@ -55,11 +57,11 @@ This is a trial and error game which seeks to develop critical thinking and logi
 - <a href="#lighthouse">Lighthouse</a>
 - <a href="#testing-user-stories">Testing User Stories</a>
 
-### 8. Credits
-- <a href="#code-used">Code Used</a>
-- <a href="#content">Content</a>
-- <a href="#media">Media</a>
+### <a href="#credits">8. Credits</a>
 - <a href="#resources">Resources</a>
+- <a href="#code-used">Code Used</a>
+- <a href="#media">Media</a>
+- <a href="#content">Content</a>
 - <a href="#acknowledgements">Acknowledgements</a>
 
 
@@ -632,7 +634,7 @@ I planned to use Jest to test js and have a strict TDD approach, but I settled f
 
 
 
-## <h2 id="credits2">8. Credits</h2>
+## <h2 id="credits">8. Credits</h2>
 ### <h3 id = "resources">Resources</h2>
 **Bootstrap Modals**
 https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
@@ -644,11 +646,48 @@ countTries function https://www.tutorialspoint.com/article/how-to-count-the-numb
 https://developer.mozilla.org/
 https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript for JS Best Practices
 
-### <h3 id="documentation">Documentation</h3>
-
-While trying to understand what intuitive design for a game means, and what the acceptance criteria and tasks whould be in order to meet this user story, I realized that I need to add another user story, the one about input validation, because no player wants to be allowed to enter invalid data type, but they want to be warned about that, and easily correct the mistake. So this user story is written with the help of AI overview for "acceptance criteria for intuitive design of a game".
+### <h3 id="code">Code Used</h3>
+All code used is credited inline in the source files via comments or in readme in dedicated sections.
 
 ### <h3 id="media">Media</h3>
+All images were taken from https://pixabay.com/ .
 
-background image - Georgiana Romanovna (GeorgyGirl) on Pixabay
-dragon sleeping - Annette (pendleburyannette) on Pixabay
+### <h3 id="content">Content</h3>
+All content was written by Veronica Teodorof.
+
+### <h3 id="acknowledgements">Acknowledgements</h3>
+I'm a newbie in this game, a clumsy one, but for this project I had the perfect team of heroes: The Mage, The Guardian, and The Child.<br>
+
+
+The Mage (aka Kevin Loughrey, or The Tutor):<br>
+- Strenght: Wisdom;<br>
+- Game Developer Experience: Max XP;<br>
+- Special Abilities: casts code and morale healing spells;<br>
+
+
+The Guardian (aka The Husband): <br>
+- Strength: Courage;<br>
+- Gamer Experience: Max XP;<br>
+- Special Abilities: ready to sacrifice for the team; <br>
+
+
+The Child (aka Vlad Boitos or The Son): <br>
+- Strength: True Heart;<br>
+- Board Game Player Experience: Max XP; <br>
+- Special Abilities: scans for and detects all bugs in the game; <br>
+
+
+THANK YOU TEAM!!!
+
+Also thank you: 
+- Louisa Evans, friend, colleague and Guardian of Teams Meetings;
+- Magdalena Redka, friend and Feedback Giver;
+- Evelyn Chan and Marcus Ip, our dear chess friends, thank you for your feedback;
+- Dylan Austin, friend and Feedback Giver;
+
+
+Thank you all!
+
+## Will you join me in my next adventure?
+
+
