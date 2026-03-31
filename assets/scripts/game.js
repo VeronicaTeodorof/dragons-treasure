@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewWin = document.getElementById("review-win");
     let count = 10;
 
-    //cursor is set on the first input after submit event on all screen sizes
+    // cursor is set on the first input after submit event on all screen sizes
     submitButton.addEventListener("click", cursorReady);
-    //cursor is set on the first input when page loads only on large screens
+    // cursor is set on the first input when page loads only on large screens
     cursorLargeScreens();
 
     // Sets the cursor ready for the user to type the first input
@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Moves focus to the next empty input field after one digit has been inserted
+    // Moves focus to the next empty input field
+    // after one digit has been inserted
     function moveFocus() {
         inputBoxes.forEach(function (ignore, i) {
             inputBoxes[i].addEventListener("input", function (event) {
@@ -43,10 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (i < inputBoxes.length - 1) {
                         // Refactored with Claude AI to meet UX expectations
                         // find returns the first element meeting the condition
-                        // box is the callback parameter representing each input box
+                        // box is the callback parameter representing
+                        // each input box
                         // arrow function used as the condition for find
-                        // ?. optional chaining guards against undefined if all boxes filled
-                        const nextEmpty = inputBoxes.find(box => box.value === "" && box !== inputBoxes[i]);
+                        // ?. optional chaining guards against undefined
+                        // if all boxes filled
+                        const nextEmpty = inputBoxes.find(
+                            (box) => box.value === "" && box !== inputBoxes[i]
+                        );
                         nextEmpty?.focus();
                     }
                 }
@@ -80,10 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function processData() {
         // Retrieve values entered by player
-        const input1 = parseInt(myForm.input1.value);
-        const input2 = parseInt(myForm.input2.value);
-        const input3 = parseInt(myForm.input3.value);
-        const input4 = parseInt(myForm.input4.value);
+        const input1 = parseInt(myForm.input1.value, 10);
+        const input2 = parseInt(myForm.input2.value, 10);
+        const input3 = parseInt(myForm.input3.value, 10);
+        const input4 = parseInt(myForm.input4.value, 10);
         const guessCode = [input1, input2, input3, input4];
         // Writes guessCode in feedback area
         const spanGuess = document.querySelector(".guess-span");
@@ -125,9 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 // where the matching pairs of correct digits have been removed
                 // from the original computerCode and guessCode.
                 // This is achieved by pushing digits that didn't meet the above
-                // criterion into new arrays, rather than removing them from the
-                // initial arrays. This way the initial arrays are not changed,
-                // as they would have been with the splice() method.
+                // criterion into new arrays, rather than removing them from
+                // the initial arrays. This way the initial arrays are not
+                // changed, as they would have been with the splice() method.
                 splicedGuessCode.push(guessCode[k]);
                 splicedComputerCode.push(computerCode[k]);
             }
@@ -163,12 +168,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function giveFeedback(correctedAnswer) {
         const redDot = "🔴 ";
         const whiteDot = "⚪ ";
-        const redX = "❌ ";
         const feedback = document.querySelector(".feedback-span");
         // Writes feedback in feedback area
         feedback.innerText = (
             correctedAnswer[0] + " x " + whiteDot + " " +
-            correctedAnswer[1] + " x " + redDot);
+            correctedAnswer[1] + " x " + redDot
+        );
         // Removes class from occupied feedback span so the next is selected
         feedback.classList.remove("feedback-span");
     }
@@ -196,8 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Disables input fields and pointer actions on inputs and submit button
     function disableForm() {
         fieldset.setAttribute("disabled", "");
-        fieldset.classList.add(".pointers-disabled");
-        submitButton.classList.add(".pointers-disabled");
+        fieldset.classList.add("pointers-disabled");
+        submitButton.classList.add("pointers-disabled");
     }
 
     function delayModal(modal, delay) {
@@ -242,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
         footer.classList.remove("fade-out");
         footer.style.opacity = "1";
         footer.classList.remove("pointers-disabled");
-        footer.classList.add(".pointers-active");
+        footer.classList.add("pointers-active");
     }
 
     // Reveals review screen when review button is clicked

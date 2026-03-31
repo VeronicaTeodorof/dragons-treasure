@@ -535,25 +535,42 @@ After adding basic CSS styles and changing HTML accordingly, I tried to validate
 Style.css page has also been validated with no errors found: [css initial validation](readme-assets/first-phase/css-initial-validation.png).
 
 
-**Second phase:**
-Index.html page was successfully validated with no errors or warnings to show:
-[Index Page HTML](readme-assets/second-phase/index-page-validation)
+**Final validation:**<br>
+[index.html](readme-assets/second-phase/w3c-final-index.png)<br>
+[game.html](readme-assets/second-phase/w3c-final-game.png)<br>
+[404.html](readme-assets/second-phase/w3c-final-not-found.png)<br>
+[style.css](readme-assets/second-phase/w3c-final-css.png)
+
+
+### <h3 id="js-validation">JS Validation</h3>
+game.js was validated with JSLint with no warnings
+<img src="readme-assets/second-phase/jslint-final.png">
 
 ### <h3 id="lighthouse">Lighthouse</h3>
 Initial lighthouse tests show some areas that can be improved in terms of accessibility and SEO. Here are the screenshots for initial tests: [initial lighthouse for mobile](readme-assets/first-phase/lighthouse-for-mobile-initial.png), [initial lighthouse for desktop](readme-assets/first-phase/lighthouse-for-desktop-initial.png), [accessibility](readme-assets/first-phase/accessibility-initial.png) and [SEO](readme-assets/first-phase/seo-initial.png).
 
 During second phase development lifecycle lighthouse tests revealed some accessibility issues related to the size of UI Buttons:
 [second-phase initial test](readme-assets/second-phase/lighthouse-2nd-initial1.png),
-[initial accessibility issue](readme-assets/second-phase/lighthouse-2nd-initial2.png).
-
+[initial accessibility issue](readme-assets/second-phase/lighthouse-2nd-initial2.png).<br>
 After changing button size and margin, the accessibility issue was solved:
 [mobile lighthouse after](readme-assets/second-phase/mobile-lighthouse-after.png), 
 [desktop lighthouse after](readme-assets/second-phase/desktop-lighthouse-after.png).
 
-### <h3 id="accessibility">Accessibility</h3>
--<main> was added to 404.html as sugessted by lighthouse;
-- headers were added to win and lose modals as suggested by https://wave.webaim.org/;
-- legend was added to fieldset and labels to inputs as suggested by lighthouse and https://wave.webaim.org/, with "visually-hidden" bootstrap class, so that they are only visible to screen readers.
+
+**Final results:**<br>
+index.html - mobile view<br>
+<img src="readme-assets/second-phase/final-index-mobile.png"><br>
+index.html - desktop view<br>
+<img src="readme-assets/second-phase/final-index-desktop.png"><br>
+game.html - mobile view<br>
+<img src="readme-assets/second-phase/final-game-mobile.png"><br>
+game.html - desktop view<br>
+<img src="readme-assets/second-phase/final-game-desktop.png"><br>
+404.html - mobile view<br>
+<img src="readme-assets/second-phase/final-not-found-mobile.png"><br>
+404.html - desktop view<br>
+<img src="readme-assets/second-phase/final-not-found-desktop.png"><br>
+
 
 ## <h2 id="credits2">8. Credits</h2>
 ### <h3 id = "resources">Resources</h2>
