@@ -648,7 +648,7 @@ I'm a newbie in this game, a clumsy one, but for this project I had the perfect 
 
 
 The Mage (aka Kevin Loughrey, or The Tutor):<br>
-- Strenght: Wisdom;<br>
+- Strength: Wisdom;<br>
 - Game Developer Experience: Max XP;<br>
 - Special Abilities: casts code and morale healing spells;<br>
 
